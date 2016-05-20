@@ -1,7 +1,7 @@
 # Laratoshl
 
 ## ATTENTION
-Currently this classes are under heavy development - so I cant recommend to use them in a production environment.
+Currently this classes are under heavy development - so I cant recommend to use them in production environments.
 
 ## Intention
 These Classes are build to give the possibility of creating own reports with the Data stored in TOSHL. Later on
@@ -14,16 +14,35 @@ installation.
 - Nesbot\Carbon 
 - TOSHL Account (Pro-Account for Stuff like Images)
 
-## Integration
+## Installation
 
+### Prerequisites
 1. Register for a TOSHL Account at [TOSHL Website](https://www.toshl.com/)
 2. Create a personal API Token by visiting [TOSHL Developer Page / Apps](https://developer.toshl.com/apps) while you`re logged in
 3. Add the newly created token to your Laravel .env file as "TOSHL_TOKEN"
-4. Create a new Folder in your rootdir called "packages" and a subsubdir "Toshl" inside the Classes Folder
-5. Just put all files from this repository inside you "app" folder in a subdirectory named "Classes\Toshl"
-6. Now you can import Toshl\Toshl in your controller to interact with the API (see example section). 
 
-You can find an example Reporting Class at App\Classes\Toshl\Report\ToshlCategoryReport.
+### Add Laratoshl to your Laravel Installation
+
+1. Take your copy of Laratoshl by
+```cmd
+composer require elcheffe/laratoshl
+```
+2. Add the ServiceProvider to you config/app.php in the 'providers' Section
+```php
+'providers' => [
+    ...
+        
+    /*
+     * 3rd Party Packages
+     */
+    elcheffe\Laratoshl\LaratoshlServiceProvider::class
+]
+```
+
+3. Publish the config file by doing:
+```cmd
+artisan vendor:publish --tag="laratoshl"
+```
 
 ## Examples
 

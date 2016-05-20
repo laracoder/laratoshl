@@ -14,17 +14,18 @@ class LaratoshlServiceProvider extends ServiceProvider
 {
 
     /**
-     * 
+     * Register bindings in the container.
+     *
+     * @return void
      */
-    public function boot()
+    public function register()
     {
-
         $token  = env('TOSHL_TOKEN');
 
         $this->app->bind('ToshlAPI', function () use ($token)  {
             return new ToshlAPI($token);
         });
-        
+
         $this->app->bind('Toshl', function () {
             return new Toshl();
         });
@@ -33,18 +34,15 @@ class LaratoshlServiceProvider extends ServiceProvider
             return new ToshlCategoryReport($app['Toshl']);
         });
     }
-    
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        // TODO: Implement register() method.
-    }
-    
-    
 
+    /**
+     *  Register any other events for your application.
+     */
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__.'/config/laratoshl.php' => config_path('laratoshl.php'),
+        ], 'laratoshl');
+    }
 
 }
