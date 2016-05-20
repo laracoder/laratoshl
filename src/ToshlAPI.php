@@ -1,5 +1,6 @@
 <?php
-namespace Laratoshl;
+
+namespace Elcheffe\Laratoshl;
 
 use Exception;
 use GuzzleHttp\Client;

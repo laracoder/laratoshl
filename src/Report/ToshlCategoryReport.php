@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratoshl\Report;
+namespace Elcheffe\Laratoshl\Report;
 
 /**
  * Class ToshlCategoryReport

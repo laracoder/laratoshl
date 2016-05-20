@@ -1,12 +1,12 @@
 <?php
 
-namespace Laratoshl;
+namespace Elcheffe\Laratoshl;
 
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
-use Laratoshl\Entities\Account;
-use Laratoshl\Entities\Entry;
-use Laratoshl\Entities\Category;
+use Elcheffe\Laratoshl\Entities\Account;
+use Elcheffe\Laratoshl\Entities\Entry;
+use Elcheffe\Laratoshl\Entities\Category;
 
 /**
  * Class Toshl

@@ -1,8 +1,8 @@
 <?php
 
-namespace Laratoshl\Report;
+namespace Elcheffe\Laratoshl\Report;
 
-use Laratoshl\Toshl;
+use Elcheffe\Laratoshl\Toshl;
 
 /**
  * Class ToshlReport

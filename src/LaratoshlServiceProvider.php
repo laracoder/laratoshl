@@ -1,9 +1,9 @@
 <?php
 
-namespace Laratoshl;
+namespace Elcheffe\Laratoshl;
 
 use Illuminate\Support\ServiceProvider;
-use Laratoshl\Report\ToshlCategoryReport;
+use Elcheffe\Laratoshl\Report\ToshlCategoryReport;
 
 /**
  * Class LaratoshlServiceProvider

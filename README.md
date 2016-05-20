@@ -29,7 +29,7 @@ composer require elcheffe/laratoshl
     /*
      * 3rd Party Packages
      */
-    elcheffe\Laratoshl\LaratoshlServiceProvider::class
+    Elcheffe\Laratoshl\LaratoshlServiceProvider::class
 ]
 ```
 

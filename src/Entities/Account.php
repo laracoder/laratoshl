@@ -1,6 +1,6 @@
 <?php
 
-namespace Laratoshl\Entities;
+namespace Elcheffe\Laratoshl\Entities;
 
 use Carbon\Carbon;
 
