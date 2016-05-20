@@ -1,0 +1,19 @@
+{
+    "name": "elcheffe/laratoshl",
+    "type": "package",
+    "description": "Laratoshl is a Bridge to get Data from TOSHL API v2",
+    "keywords": ["framework", "http", "rest", "web service", "curl", "client", "HTTP client"],
+    "homepage": "http://github.com/elcheffe/laratoshl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Schmelz",
+            "email": "daniel@schmelz.it",
+            "homepage": "https://github.com/elcheffe"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "guzzlehttp/guzzle": "^6.2"
+    }
+}
