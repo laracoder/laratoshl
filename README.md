@@ -1,12 +1,6 @@
 # Laratoshl
 
-## ATTENTION
 Currently this classes are under heavy development - so I cant recommend to use them in production environments.
-
-## Intention
-These Classes are build to give the possibility of creating own reports with the Data stored in TOSHL. Later on
-I will convert this repo into a Laravel Package which you can load directly by "composer require" inside your laravel 
-installation.
 
 ## Requirements
 - Laravel Framework
