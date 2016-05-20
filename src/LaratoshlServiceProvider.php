@@ -40,8 +40,10 @@ class LaratoshlServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $configPath = __DIR__ . '/../config/laratoshl.php';
+        
         $this->publishes([
-            __DIR__.'/config/laratoshl.php' => config_path('laratoshl.php'),
+            $configPath => config_path('laratoshl.php'),
         ], 'laratoshl');
     }
 
