@@ -1,6 +1,7 @@
 <?php
 
 namespace Elcheffe\Laratoshl\Report;
+use Carbon\Carbon;
 
 /**
  * Class ToshlCategoryReport
@@ -12,11 +13,11 @@ class ToshlCategoryReport extends ToshlReport
     /**
      * @return \Illuminate\Support\Collection
      */
-    public function getData()
+    public function getData(Carbon $date)
     {
         return [
-            'income' => $this->Toshl->getCategoriesIncomeSumsForCurrentMonth(), 
-            'expense' => $this->Toshl->getCategoriesExpenseSumsForCurrentMonth()
+            'income' => $this->Toshl->getCategoriesIncomeSumsForMonth($date),
+            'expense' => $this->Toshl->getCategoriesExpenseSumsForMonth($date)
         ];
     }
 

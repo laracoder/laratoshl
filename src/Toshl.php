@@ -106,10 +106,9 @@ class Toshl
                 'from' => date('Y-m-01'),
                 'to' => $lastDayOfMonthDate->toDateString(),
                 'currency' => $currency,
-                'type' => 'income',
+                'type' => 'income'
             ]
         ];
-
 
         // Send the request to the API
         $responseFromAPI = $this->Api->sendGetRequestToAPI('categories/sums', $optionalParameters);
@@ -140,6 +139,70 @@ class Toshl
         ];
 
 
+        // Send the request to the API
+        $responseFromAPI = $this->Api->sendGetRequestToAPI('categories/sums', $optionalParameters);
+
+        // Build a new Laravel Collection from the received data and return it
+        return $this->getCategoriesSumsCollection($responseFromAPI);
+    }
+
+    /**
+     * Get the users income categories sums
+     * @link https://developer.toshl.com/docs/categories/
+     * @param string $currency
+     * @return Collection
+     * @throws \Exception
+     */
+    public function getCategoriesIncomeSumsForMonth($date, $currency = 'EUR')
+    {
+        $from = $date->toDateString();
+        // Get the last day of the month
+        $lastDay = $date;
+        $lastDay = $lastDay->addMonth();
+        $lastDay->day = 0;
+        $to = $lastDay->toDateString();
+
+        $optionalParameters = [
+            'query' => [
+                'from' => $from,
+                'to' => $to,
+                'currency' => $currency,
+                'type' => 'income'
+            ]
+        ];
+        // Send the request to the API
+        $responseFromAPI = $this->Api->sendGetRequestToAPI('categories/sums', $optionalParameters);
+
+        // Build a new Laravel Collection from the received data and return it
+        return $this->getCategoriesSumsCollection($responseFromAPI);
+    }
+    
+    /**
+     * Get the users  categories expenses
+     * @link https://developer.toshl.com/docs/categories/
+     * @param string $currency
+     * @return Collection
+     * @throws \Exception
+     */
+    public function getCategoriesExpenseSumsForMonth($date, $currency = 'EUR')
+    {
+
+        $from = $date->day('1')->toDateString();
+        // Get the last day of the month
+        $lastDay = $date;
+        $lastDay = $lastDay->addMonth();
+        $lastDay->day = 0;
+        $to = $lastDay->toDateString();
+
+        $optionalParameters = [
+            'query' => [
+                'from' => $from,
+                'to' => $to,
+                'currency' => $currency,
+                'type' => 'expense'
+            ]
+        ];
+        
         // Send the request to the API
         $responseFromAPI = $this->Api->sendGetRequestToAPI('categories/sums', $optionalParameters);
 

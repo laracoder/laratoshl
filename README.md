@@ -38,7 +38,7 @@ composer require elcheffe/laratoshl
 artisan vendor:publish --tag="laratoshl"
 ```
 
-## API Functions
+## Laratoshl Functions
 
 ### getUserData  
 Get the users data in a nice illuminate collection
