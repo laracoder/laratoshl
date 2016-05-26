@@ -1,12 +1,13 @@
 # Laratoshl Examples
 
-Currently this classes are under heavy development - so I cant recommend to use them in production environments.
+In this folder there are some examples of howto use Laratoshl in your application
 
-## Requirements
-- Laravel Framework
-- Laratoshl
-- GuzzleHTTP > 6.0
-- niklasravnsborg/laravel-pdf
-- Nesbot\Carbon 
-- TOSHL Account (Pro-Account for Stuff like Images)
+### pdf_report_by_categories
+
+Requires an additional package for creating PDF Files.
+
+```cmd
+composer require niklasravnsborg/laravel-pdf
+```
+
 

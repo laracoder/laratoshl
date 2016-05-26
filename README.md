@@ -40,7 +40,11 @@ artisan vendor:publish --tag="laratoshl"
 
 ## Examples
 
-### Get a HTML Report of all categories and its sums for current month
+For examples of howto use Laratoshl have a look in its "examples" folder 
+
+```cmd
+vendor/elcheffe/Laratoshl/examples
+```
 
 #### Controller 
 ```php
