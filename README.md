@@ -50,6 +50,10 @@ Get a Collection of the users Categories
 Get a Collection of the users entries for the current month
 ### getCategoriesSumsForCurrentMonth ($currency)
 Get a Collection of the categories and its sums filtered by current month. Needs a currency (string)
+### getCategoriesExpenseSumsForCurrentMonth ($currency)
+Get a Collection of the categories with type "expense" and its sums filtered by current month. Needs a currency (string)
+### getCategoriesIncomeSumsForCurrentMonth ($currency)
+Get a Collection of the categories with type "income" and its sums filtered by current month. Needs a currency (string)
 
 ## Examples
 For examples of howto use Laratoshl have a look in its "examples" folder 

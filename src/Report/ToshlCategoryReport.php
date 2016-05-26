@@ -14,10 +14,10 @@ class ToshlCategoryReport extends ToshlReport
      */
     public function getData()
     {
-        // get Entries
-        $categorySumsForCurrentMonth = $this->Toshl->getCategoriesSumsForCurrentMonth('EUR');
-
-        return $categorySumsForCurrentMonth;
+        return [
+            'income' => $this->Toshl->getCategoriesIncomeSumsForCurrentMonth(), 
+            'expense' => $this->Toshl->getCategoriesExpenseSumsForCurrentMonth()
+        ];
     }
 
 }
