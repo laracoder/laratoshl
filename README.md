@@ -38,58 +38,6 @@ composer require elcheffe/laratoshl
 artisan vendor:publish --tag="laratoshl"
 ```
 
-## Examples
-
-For examples of howto use Laratoshl have a look in its "examples" folder 
-
-```cmd
-vendor/elcheffe/Laratoshl/examples
-```
-
-#### Controller 
-```php
-<?php
-
-namespace App\Http\Controllers;
-
-use Laratoshl\Report\ToshlCategoryReport;
-
-/**
- * Class ToshlController
- * @package App\Http\Controllers
- */
-class ToshlController extends Controller
-{
-    /**
-     * Login
-     * @param ToshlCategoryReport $Report
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function test(ToshlCategoryReport $Report)
-    {
-        $data = $Report->getData();
-
-        return view('test', compact('data'));
-    }
-}
-```
-
-#### View 'test'
-```blade
-<h1>Report - Kategorien</h1>
-@foreach($data->all() as $category)
-    @if($category->type != 'system')
-     <h2>{{$category->name}}</h2>
-        <h4>
-             @if($category->type == 'income')
-                {{$category->incomes->get('count')}} Buchungen |  {{$category->incomes->get('sum')}} €
-             @elseif($category->type == 'expense')
-                {{$category->expenses->get('count')}} Buchungen |  {{$category->expenses->get('sum')}} €
-             @endif
-        </h4>
-     @endif
-@endforeach
-```
 ## API Functions
 
 ### getUserData  
@@ -102,3 +50,6 @@ Get a Collection of the users Categories
 Get a Collection of the users entries for the current month
 ### getCategoriesSumsForCurrentMonth ($currency)
 Get a Collection of the categories and its sums filtered by current month. Needs a currency (string)
+
+## Examples
+For examples of howto use Laratoshl have a look in its "examples" folder 
